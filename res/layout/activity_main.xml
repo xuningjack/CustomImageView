@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jack="http://schemas.android.com/apk/res/com.example.customview05imageview"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon" />
+
+        <com.example.customview.view.CustomImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            jack:src="@drawable/icon"
+            jack:type="circle" />
+
+        <com.example.customview.view.CustomImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            jack:borderRadius="10dp"
+            jack:src="@drawable/icon"
+            jack:type="round" />
+
+        <com.example.customview.view.CustomImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            jack:borderRadius="20dp"
+            jack:src="@drawable/icon"
+            jack:type="round" />
+    </LinearLayout>
+
+</ScrollView>
