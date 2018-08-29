@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="borderRadius" format="dimension"/>
+    <attr name="src" format="reference"/>
+    <attr name="url_src" format="string"/>
+    <attr name="type">
+        <enum name="circle" value="0"/>
+        <enum name="round" value="1"/>
+        <enum name="url" value="2"/>
+        <enum name="circle_url" value="3"/>
+        <!--<enum name="round_url" value="4"/>-->
+    </attr>
+
+
+    <declare-styleable name="CustomImageView">
+        <attr name="borderRadius"/>
+        <attr name="src"/>
+        <attr name="url_src"/>
+        <attr name="type"/>
+    </declare-styleable>
+
+</resources>

@@ -1,42 +1,61 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:jack="http://schemas.android.com/apk/res/com.example.customview05imageview"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jack="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
+        <!--正常图-->
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:src="@drawable/icon" />
+            android:src="@drawable/icon"/>
 
+        <!--圆角图-->
         <com.example.customview.view.CustomImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             jack:src="@drawable/icon"
-            jack:type="circle" />
+            jack:type="circle"/>
 
+        <!--原型图-->
         <com.example.customview.view.CustomImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             jack:borderRadius="10dp"
             jack:src="@drawable/icon"
-            jack:type="round" />
+            jack:type="round"/>
 
+        <!--网络图-->
         <com.example.customview.view.CustomImageView
+            android:id="@+id/customImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             jack:borderRadius="20dp"
+            jack:type="url"
             jack:src="@drawable/icon"
-            jack:type="round" />
+            jack:url_src="https://www.baidu.com/img/bd_logo1.png"/>
+
+        <!--网络圆角图-->
+        <com.example.customview.view.CustomImageView
+            android:id="@+id/customCircleImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            jack:borderRadius="20dp"
+            jack:type="circle_url"
+            jack:src="@drawable/icon"
+            jack:url_src="https://www.baidu.com/img/bd_logo1.png"/>
+
+
     </LinearLayout>
 
 </ScrollView>
