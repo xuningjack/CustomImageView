@@ -182,12 +182,10 @@ public class CustomImageView extends ImageView {
                         new MyImageLoader.ILoadingComplete() {
                     @Override
                     public void onLoadFinished() {
-//                        int min = Math.min(mWidth, mHeight);
-//                        if(imageView.getDrawable() != null){
+                        int min = Math.min(mWidth, mHeight);
+//                        if(imageView.getDrawable() != null){  // TODO: 2018/8/29 会crash
 //                            Bitmap bitmap = getBitmap(imageView.getDrawable());
-//                            mSrc = Bitmap.createScaledBitmap(bitmap, min, min, false);
-//                            canvas.drawBitmap(createCircleImage(mSrc, min), 0, 0, null);
-//                            CustomImageView.this.draw(canvas);
+//                            canvas.drawBitmap(createCircleImage(bitmap, min), 0, 0, null);
 //                        }
                     }
                 });
@@ -199,7 +197,10 @@ public class CustomImageView extends ImageView {
                         new MyImageLoader.ILoadingComplete() {
                             @Override
                             public void onLoadFinished() {
-                                canvas.drawBitmap(createRoundConnerImage(mSrc), 0, 0, null);
+//                                if(imageView.getDrawable() != null){  // TODO: 2018/8/29  会crash
+//                                    Bitmap bitmap = getBitmap(imageView.getDrawable());
+//                                    canvas.drawBitmap(createRoundConnerImage(mSrc), 0, 0, null);
+//                                }
                             }
                         });
                 super.onDraw(canvas);
@@ -266,4 +267,7 @@ public class CustomImageView extends ImageView {
         canvas.drawBitmap(source, 0, 0, paint);
         return target;
     }
+
+
+
 }

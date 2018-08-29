@@ -4,16 +4,13 @@ package com.example.customview.utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.util.LruCache;
-import android.widget.ImageView;
 
-import com.example.customview.R;
 import com.example.customview.view.CustomImageView;
 
 import java.io.File;
@@ -66,30 +63,9 @@ public class MyImageLoader {
     private Handler mUIHandler;
 
 
-    /**
-     * 单例模式
-     *
-     * @param threadCount
-     * @return
-     */
-    public static MyImageLoader getInstance(int threadCount, QueueType type) {
-        if (mInstance == null) {
-            synchronized (syncObject) {
-                if (mInstance == null) {
-                    mInstance = new MyImageLoader(threadCount, type);
-                }
-            }
-        }
-        return mInstance;
-    }
-
     public static MyImageLoader getInstance() {
         if (mInstance == null) {
-            synchronized (syncObject) {
-                if (mInstance == null) {
-                    mInstance = new MyImageLoader(DEFAULT_THREAD_COUNT, QueueType.LIFO);
-                }
-            }
+            mInstance = new MyImageLoader(DEFAULT_THREAD_COUNT, QueueType.LIFO);
         }
         return mInstance;
     }
