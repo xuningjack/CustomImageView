@@ -19,7 +19,7 @@ Custom Image View（自定义圆形、圆角图片）
             jack:src="@drawable/icon"
             jack:type="circle"/>
 
-        <!--原型图-->
+        <!--圆形图-->
         <com.example.customview.view.CustomImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
