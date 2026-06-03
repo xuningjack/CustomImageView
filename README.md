@@ -1,9 +1,13 @@
 # CustomImageView
 Custom Image View（自定义圆形、圆角图片）
-效果图：  
+
+### 项目架构：
+<img src="architecture.png" alt="项目整体架构图">
+
+### 效果图：  
 ![Alt text](https://github.com/xuningjack/CustomImageView/blob/master/image/0.jpg)    
 
-使用：配置如下
+### 使用配置如下：
         <!--正常图-->
         <ImageView
             android:layout_width="wrap_content"
